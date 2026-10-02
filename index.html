@@ -36,6 +36,33 @@
     @media(max-width:600px){.product-modal-image{height:210px}.single-product .product-thumb{width:64px;height:64px;flex-basis:64px}}
     @keyframes modalIn{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
     @media(max-width:600px){.product-modal-card{padding:24px 20px;border-radius:16px}.product-modal-card h2{font-size:25px}.product-modal-actions{flex-direction:column}.product-modal-actions a{width:100%}}
+
+    /* Premium scroll animations */
+    html{scroll-behavior:smooth}
+    body{overflow-x:hidden}
+    .nav{transition:background .35s ease,box-shadow .35s ease,backdrop-filter .35s ease}
+    .nav.scrolled{background:rgba(190,0,0,.94)!important;box-shadow:0 10px 30px rgba(0,0,0,.16);backdrop-filter:blur(10px)}
+    .hero-copy,.trust>div,.section>div,.section>p,.product-section .section-inner>div,.contact>div,.cards .clickable-card{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+    .hero-copy{opacity:1;transform:none;animation:heroIn 1s cubic-bezier(.2,.7,.2,1) both}
+    .trust>div:nth-child(2),.cards .clickable-card:nth-child(2){transition-delay:.08s}
+    .trust>div:nth-child(3),.cards .clickable-card:nth-child(3){transition-delay:.16s}
+    .trust>div:nth-child(4){transition-delay:.24s}
+    .reveal.in-view{opacity:1;transform:none}
+    .product-section .brand-watermark{transition:transform 1.2s cubic-bezier(.2,.7,.2,1),opacity .8s ease}
+    .product-section.in-view .brand-watermark{transform:translate(-50%,-50%) scale(1.04)}
+    .product-list span,.single-product{transition:transform .25s ease,background .25s ease,box-shadow .25s ease!important}
+    .product-list span:hover,.single-product:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 12px 30px rgba(0,0,0,.16)}
+    .clickable-card{transition:transform .3s ease,box-shadow .3s ease,opacity .8s ease!important}
+    .clickable-card:hover{transform:translateY(-10px)!important;box-shadow:0 22px 45px rgba(0,0,0,.14)}
+    .clickable-card .card-product-image{transition:transform .45s ease}
+    .clickable-card:hover .card-product-image{transform:scale(1.06)}
+    .stats strong{display:inline-block;min-width:2ch}
+    .hero{position:relative;overflow:hidden}
+    .hero:after{content:"";position:absolute;inset:-30%;background:radial-gradient(circle at 75% 30%,rgba(255,255,255,.15),transparent 24%);animation:heroGlow 7s ease-in-out infinite;pointer-events:none}
+    .hero-copy{position:relative;z-index:1}
+    @keyframes heroIn{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+    @keyframes heroGlow{0%,100%{transform:translate3d(-2%,0,0) scale(1)}50%{transform:translate3d(2%,2%,0) scale(1.08)}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-copy,.hero:after{animation:none}.reveal,.hero-copy,.product-section .brand-watermark{transition:none!important;transform:none!important;opacity:1!important}}
   </style>
   <script type="application/ld+json">
   {
@@ -290,6 +317,42 @@
     document.querySelector('.product-modal-close').addEventListener('click', closeProduct);
     modal.addEventListener('click', (event) => { if (event.target === modal) closeProduct(); });
     document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeProduct(); });
+
+
+    // Scroll reveal + animated counters + active navigation
+    const revealItems = document.querySelectorAll('.trust>div,.section>div,.section>p,.product-section .section-inner>div,.contact>div,.cards .clickable-card');
+    revealItems.forEach(el=>el.classList.add('reveal'));
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    },{threshold:.14,rootMargin:'0px 0px -50px 0px'});
+    revealItems.forEach(el=>io.observe(el));
+    document.querySelectorAll('.product-section').forEach(sec=>io.observe(sec));
+
+    const nav=document.querySelector('.nav');
+    const onScroll=()=>nav && nav.classList.toggle('scrolled',window.scrollY>30);
+    onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+
+    // Count-up numbers when the stats enter the screen
+    const counters=document.querySelectorAll('.stats strong');
+    const counterObserver=new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(!entry.isIntersecting) return;
+        const el=entry.target, target=parseInt(el.textContent.replace(/\D/g,''),10)||0;
+        const duration=1100, start=performance.now();
+        const tick=(now)=>{
+          const p=Math.min((now-start)/duration,1), eased=1-Math.pow(1-p,3);
+          el.textContent=Math.round(target*eased);
+          if(p<1) requestAnimationFrame(tick); else el.textContent=target;
+        };
+        requestAnimationFrame(tick); counterObserver.unobserve(el);
+      });
+    },{threshold:.8});
+    counters.forEach(el=>counterObserver.observe(el));
   </script>
 </body>
 </html>
