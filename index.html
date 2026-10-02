@@ -11,13 +11,12 @@
   <style>
     .product-list span,.single-product{cursor:pointer;transition:transform .2s ease,background .2s ease}
     .product-section{position:relative;overflow:hidden}
-    .product-section::before{position:absolute;right:-7%;top:50%;transform:translateY(-50%) rotate(-8deg);font-weight:900;line-height:.8;white-space:nowrap;pointer-events:none;z-index:0;opacity:.12;letter-spacing:-4px}
-    .product-section.red::before,.product-section.navy::before,.product-section.green::before{content:"";display:none}
-    .brand-watermark{position:absolute;right:4%;top:50%;transform:translateY(-50%);width:min(43%,520px);max-height:62%;object-fit:contain;opacity:.13;filter:brightness(0) invert(1);pointer-events:none;z-index:0}
-    .brand-watermark.redbull{filter:none;opacity:.14}
-    .brand-watermark.trimurti{filter:brightness(0) invert(1);opacity:.14}
+    .brand-watermark{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(82%,1050px);height:auto;max-height:78%;object-fit:contain;opacity:.12;pointer-events:none;z-index:0}
+    .brand-watermark.coca{filter:brightness(0) invert(1);opacity:.13}
+    .brand-watermark.redbull{filter:none;opacity:.12}
+    .brand-watermark.trimurti{filter:none;opacity:.12}
     .product-section .section-inner{position:relative;z-index:1}
-    @media(max-width:700px){.brand-watermark{width:58%;right:-5%;opacity:.10}.brand-watermark.redbull,.brand-watermark.trimurti{opacity:.11}}
+    @media(max-width:700px){.brand-watermark{width:92%;max-height:72%;opacity:.10}.brand-watermark.coca{opacity:.11}.brand-watermark.redbull,.brand-watermark.trimurti{opacity:.10}}
     .product-list span:hover,.single-product:hover{transform:translateY(-2px)}
     .product-list span:focus-visible,.single-product:focus-visible{outline:3px solid rgba(255,255,255,.8);outline-offset:3px}
     .product-modal{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.68)}
@@ -107,7 +106,7 @@
     </section>
 
     <section id="coca-cola" class="product-section red">
-      <img class="brand-watermark" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg" alt="Coca-Cola logo watermark" aria-hidden="true">
+      <img class="brand-watermark coca" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg" alt="Coca-Cola logo watermark" aria-hidden="true">
       <div class="section-inner">
         <div>
           <span class="eyebrow">COCA-COLA DISTRIBUTION</span>
@@ -140,7 +139,7 @@
     </section>
 
     <section id="trimurti" class="product-section green">
-      <img class="brand-watermark trimurti" src="https://trimurtiproducts.com/wp-content/uploads/2024/12/Logo.png" alt="Trimurti logo watermark" aria-hidden="true">
+      <img class="brand-watermark trimurti" src="https://cdn.brandfetch.io/idjM8r48Qa/w/1157/h/650/theme/dark/logo.png?c=1bxid64Mup7aczewSAYMX&t=1769089947362" alt="Trimurti logo watermark" aria-hidden="true">
       <div class="section-inner">
         <div>
           <span class="eyebrow">TRIMURTI BUILDING PRODUCTS</span>
