@@ -37,6 +37,16 @@
     @keyframes modalIn{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
     @media(max-width:600px){.product-modal-card{padding:24px 20px;border-radius:16px}.product-modal-card h2{font-size:25px}.product-modal-actions{flex-direction:column}.product-modal-actions a{width:100%}}
 
+
+    .individual-products-heading{text-align:center;margin:42px 0 18px}
+    .individual-products-heading h3{font-size:30px;margin:6px 0 0}
+    .individual-products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;max-width:1100px;margin:0 auto}
+    .individual-products .product-item{min-height:145px;padding:18px 14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:18px;box-shadow:0 10px 28px rgba(0,0,0,.07);cursor:pointer;text-align:center;font-weight:700;transition:transform .25s ease,box-shadow .25s ease}
+    .individual-products .product-item:hover{transform:translateY(-7px);box-shadow:0 18px 38px rgba(0,0,0,.13)}
+    .individual-products .product-thumb{width:82px;height:82px;flex:0 0 82px;object-fit:contain;background:#f7f7f7;border-radius:12px;padding:5px}
+    @media(max-width:900px){.individual-products{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @media(max-width:650px){.individual-products{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.individual-products .product-item{min-height:130px;padding:14px 10px}.individual-products .product-thumb{width:68px;height:68px;flex-basis:68px}.individual-products-heading h3{font-size:25px}}
+
     .cards .clickable-card h3{margin:0 0 8px!important;line-height:1.2!important;text-align:center!important}
     .cards .clickable-card .category-description{display:block!important;margin:0 auto!important;max-width:92%!important;line-height:1.55!important;text-align:center!important}
     .cards .clickable-card .card-product-image{flex:none!important}
@@ -198,6 +208,24 @@
         <article class="clickable-card" role="button" tabindex="0" data-product="Coca-Cola Beverages"><img class="card-product-image company-logo-image" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg" alt="Coca-Cola official logo"><h3>Coca-Cola Beverages</h3><p class="category-description">Coca-Cola, Thums Up, Sprite, Fanta, Limca and Maaza.</p></article>
         <article class="clickable-card" role="button" tabindex="0" data-product="Red Bull Energy Drink"><img class="card-product-image company-logo-image" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Logo_of_Red_bull.svg" alt="Red Bull official logo"><h3>Red Bull</h3><p class="category-description">Red Bull Energy Drink wholesale distribution.</p></article>
         <article class="clickable-card" role="button" tabindex="0" data-product="Trimurti Building Materials"><img class="card-product-image company-logo-image" src="https://msmemart.com/upload/memberprofiles/169365547499816927.jpg" alt="Trimurti Wall Care Products logo"><h3>Trimurti Wall Products</h3><p class="category-description">Wall Putty, POP, White Cement, Tile Adhesive and White Wash.</p></article>
+      </div>
+      <div class="individual-products-heading">
+        <span class="eyebrow">INDIVIDUAL PRODUCTS</span>
+        <h3>All Products</h3>
+      </div>
+      <div class="individual-products">
+        <span class="product-item" role="button" tabindex="0" data-product="Coca-Cola">Coca-Cola</span>
+        <span class="product-item" role="button" tabindex="0" data-product="Thums Up">Thums Up</span>
+        <span class="product-item" role="button" tabindex="0" data-product="Sprite">Sprite</span>
+        <span class="product-item" role="button" tabindex="0" data-product="Fanta">Fanta</span>
+        <span class="product-item" role="button" tabindex="0" data-product="Limca">Limca</span>
+        <span class="product-item" role="button" tabindex="0" data-product="Maaza">Maaza</span>
+        <span class="product-item" role="button" tabindex="0" data-product="Red Bull Energy Drink">Red Bull Energy Drink</span>
+        <span class="product-item" role="button" tabindex="0" data-product="Trimurti Wall Putty">Wall Putty</span>
+        <span class="product-item" role="button" tabindex="0" data-product="Trimurti POP">POP</span>
+        <span class="product-item" role="button" tabindex="0" data-product="Trimurti White Cement">White Cement</span>
+        <span class="product-item" role="button" tabindex="0" data-product="Trimurti Tile Adhesive">Tile Adhesive</span>
+        <span class="product-item" role="button" tabindex="0" data-product="Trimurti White Wash">White Wash</span>
       </div>
     </section>
 
