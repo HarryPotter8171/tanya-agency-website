@@ -51,6 +51,12 @@
     .cards .clickable-card .category-description{display:block!important;margin:0 auto!important;max-width:92%!important;line-height:1.55!important;text-align:center!important}
     .cards .clickable-card .card-product-image{flex:none!important}
 
+    .products-cta{text-align:center;margin:34px auto 0;max-width:900px;padding:22px 20px;border-radius:18px;background:linear-gradient(135deg,#fafafa,#f3f3f3);border:1px solid rgba(0,0,0,.07)}
+    .products-cta p{margin:0 0 14px;font-weight:700;color:#222}
+    .products-cta-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .products-cta-actions .btn{text-decoration:none}
+    @media(max-width:600px){.products-cta{padding:18px 14px}.products-cta-actions{flex-direction:column}.products-cta-actions .btn{width:100%}}
+
     /* Premium scroll animations */
     html{scroll-behavior:smooth}
     body{overflow-x:hidden}
@@ -202,7 +208,7 @@
       <div class="center">
         <span class="eyebrow">OUR PRODUCTS</span>
         <h2>Wholesale Product Range</h2>
-        <p>Click any product category to see its description and contact Tanya Agency for wholesale enquiries.</p>
+        <p>Explore our wholesale categories and individual products. Click any card for product details and wholesale enquiry.</p>
       </div>
       <div class="cards">
         <article class="clickable-card" role="button" tabindex="0" data-product="Coca-Cola Beverages"><img class="card-product-image company-logo-image" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg" alt="Coca-Cola official logo"><h3>Coca-Cola Beverages</h3><p class="category-description">Coca-Cola, Thums Up, Sprite, Fanta, Limca and Maaza.</p></article>
@@ -226,6 +232,13 @@
         <span class="product-item" role="button" tabindex="0" data-product="Trimurti White Cement">White Cement</span>
         <span class="product-item" role="button" tabindex="0" data-product="Trimurti Tile Adhesive">Tile Adhesive</span>
         <span class="product-item" role="button" tabindex="0" data-product="Trimurti White Wash">White Wash</span>
+      </div>
+      <div class="products-cta">
+        <p>Need wholesale pricing or availability?</p>
+        <div class="products-cta-actions">
+          <a class="btn primary" href="tel:+919557495828">Call for Wholesale Enquiry</a>
+          <a class="btn whatsapp" href="https://wa.me/919557495828" target="_blank" rel="noopener">WhatsApp Wholesale Enquiry</a>
+        </div>
       </div>
     </section>
 
