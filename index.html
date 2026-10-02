@@ -12,11 +12,11 @@
     .product-list span,.single-product{cursor:pointer;transition:transform .2s ease,background .2s ease}
     .product-section{position:relative;overflow:hidden}
     .brand-watermark{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(82%,1050px);height:auto;max-height:78%;object-fit:contain;opacity:.25;pointer-events:none;z-index:0}
-    .brand-watermark.coca{filter:brightness(0) invert(1);opacity:.34}
-    .brand-watermark.redbull{filter:none;opacity:.32}
-    .brand-watermark.trimurti{filter:none;opacity:.32}
+    .brand-watermark.coca{filter:brightness(0) invert(1);opacity:.48}
+    .brand-watermark.redbull{filter:none;opacity:.44}
+    .brand-watermark.trimurti{filter:none;opacity:.44}
     .product-section .section-inner{position:relative;z-index:1}
-    @media(max-width:700px){.brand-watermark{width:92%;max-height:72%;opacity:.20}.brand-watermark.coca{opacity:.28}.brand-watermark.redbull,.brand-watermark.trimurti{opacity:.27}}
+    @media(max-width:700px){.brand-watermark{width:92%;max-height:72%;opacity:.20}.brand-watermark.coca{opacity:.38}.brand-watermark.redbull,.brand-watermark.trimurti{opacity:.36}}
     .product-list span:hover,.single-product:hover{transform:translateY(-2px)}
     .product-list span:focus-visible,.single-product:focus-visible{outline:3px solid rgba(255,255,255,.8);outline-offset:3px}
     .product-modal{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.68)}
@@ -63,6 +63,7 @@
     .nav{transition:background .35s ease,box-shadow .35s ease,backdrop-filter .35s ease}
     .nav.scrolled{background:rgba(190,0,0,.94)!important;box-shadow:0 10px 30px rgba(0,0,0,.16);backdrop-filter:blur(10px)}
     .hero-copy,.trust>div,.section>div,.section>p,.product-section .section-inner>div,.contact>div,.cards .clickable-card{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+    .product-section .section-inner>div{opacity:1;transform:none}
     .hero-copy{opacity:1;transform:none;animation:heroIn 1s cubic-bezier(.2,.7,.2,1) both}
     .trust>div:nth-child(2),.cards .clickable-card:nth-child(2){transition-delay:.08s}
     .trust>div:nth-child(3),.cards .clickable-card:nth-child(3){transition-delay:.16s}
@@ -126,7 +127,7 @@
         <p>Serving retailers, contractors and businesses in Sidhpura and nearby areas of Kasganj, Uttar Pradesh.</p>
         <div class="stats">
           <div><strong>25</strong><span>Years Coca-Cola<br>distribution</span></div>
-          <div><strong>2026</strong><span>Red Bull<br>distribution started</span></div>
+          <div><strong>2026</strong><span>Red Bull<br>business started</span></div>
           <div><strong>6</strong><span>Years Trimurti<br>products</span></div>
         </div>
         <div class="actions">
