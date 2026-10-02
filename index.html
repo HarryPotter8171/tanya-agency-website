@@ -3,19 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tanya Agency | Coca-Cola, Red Bull & Trimurti Distributor in Sidhpura, Kasganj</title>
-  <meta name="description" content="Tanya Agency is an authorized wholesale distribution business on Etah-Amanpur Road, Sidhpura, Kasganj (UP), with 25 years in Coca-Cola distribution, 6 years in Trimurti building products, and Red Bull wholesale supply.">
-  <meta name="keywords" content="Tanya Agency Sidhpura, Coca Cola distributor Kasganj, Red Bull wholesale Sidhpura, Trimurti wall putty POP wholesale, cold drink agency Etah Amanpur Road Sidhpura">
-  <meta name="robots" content="index, follow">
+  <title>Tanya Agency | Coca-Cola, Red Bull & Trimurti Distributor in Sidhpura</title>
+  <meta name="description" content="Tanya Agency is a wholesale distribution business in Sidhpura, Kasganj, Uttar Pradesh, associated with Coca-Cola distribution for 25 years and Trimurti products for 6 years. We also distribute Red Bull and serve retailers and businesses in nearby areas.">
   <meta name="theme-color" content="#d40000">
-
-  <!-- Open Graph / WhatsApp Preview Meta Tags -->
-  <meta property="og:title" content="Tanya Agency | Wholesale Distribution • Sidhpura, Kasganj">
-  <meta property="og:description" content="25 Years of Coca-Cola, Red Bull & Trimurti Building Products wholesale supply for retailers, contractors & events.">
-  <meta property="og:url" content="https://tanya-agency-website.vercel.app/">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://tanya-agency-website.vercel.app/logo.png">
-
   <link rel="icon" href="logo.png">
   <link rel="stylesheet" href="styles.css">
   <style>
@@ -29,30 +19,25 @@
     @media(max-width:700px){.brand-watermark{width:92%;max-height:72%;opacity:.20}.brand-watermark.coca{opacity:.44}.brand-watermark.redbull,.brand-watermark.trimurti{opacity:.42}}
     .product-list span:hover,.single-product:hover{transform:translateY(-2px)}
     .product-list span:focus-visible,.single-product:focus-visible{outline:3px solid rgba(255,255,255,.8);outline-offset:3px}
-    
-    /* Modal Styles */
-    .product-modal{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.68);backdrop-filter:blur(4px)}
+    .product-modal{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.68)}
     .product-modal.open{display:flex}
-    .product-modal-card{width:min(560px,100%);background:#fff;border-radius:20px;box-shadow:0 25px 80px rgba(0,0,0,.35);padding:30px;position:relative;color:#171717;animation:modalIn .18s ease-out;max-height:90vh;overflow-y:auto}
-    .product-modal-card h2{margin:0 40px 10px 0;font-size:28px;line-height:1.15}
-    .product-modal-card p{margin:0 0 16px;line-height:1.65;color:#4b4b4b}
+    .product-modal-card{width:min(560px,100%);background:#fff;border-radius:20px;box-shadow:0 25px 80px rgba(0,0,0,.35);padding:30px;position:relative;color:#171717;animation:modalIn .18s ease-out}
+    .product-modal-card h2{margin:0 40px 10px 0;font-size:30px;line-height:1.15}
+    .product-modal-card p{margin:0 0 22px;line-height:1.65;color:#4b4b4b}
     .product-modal-close{position:absolute;right:14px;top:12px;width:42px;height:42px;border:0;border-radius:50%;background:#f2f2f2;font-size:27px;cursor:pointer;line-height:1}
-    .product-modal-specs{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:12px 15px;margin-bottom:20px;font-size:14px;color:#1e293b}
-    .product-modal-specs strong{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.8px;color:#d40000;margin-bottom:4px}
     .product-modal-actions{display:flex;gap:10px;flex-wrap:wrap}
     .product-modal-actions a{display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
     .product-modal-note{font-size:13px!important;color:#777!important;margin-top:16px!important;margin-bottom:0!important}
-    .product-modal-image{width:100%;height:230px;object-fit:contain;background:#f7f7f7;border-radius:14px;margin:0 0 18px;padding:12px;display:block}
-    
+    .product-modal-image{width:100%;height:250px;object-fit:contain;background:#f7f7f7;border-radius:14px;margin:0 0 20px;padding:12px;display:block}
     .product-list span[data-product],.single-product[data-product]{display:inline-flex!important;align-items:center;gap:10px}.clickable-card[data-product]{display:block!important;text-align:center!important}
     [data-product] .product-thumb{width:48px;height:48px;object-fit:contain;background:rgba(255,255,255,.96);border-radius:10px;padding:3px;flex:0 0 48px}
     .clickable-card .card-product-image{display:block;width:100%;height:140px;object-fit:contain;background:#f7f7f7;border-radius:14px;margin-bottom:18px;padding:10px}
     .single-product .product-thumb{width:80px;height:80px;flex-basis:80px}
-    @media(max-width:600px){.product-modal-image{height:190px}.single-product .product-thumb{width:64px;height:64px;flex-basis:64px}}
+    @media(max-width:600px){.product-modal-image{height:210px}.single-product .product-thumb{width:64px;height:64px;flex-basis:64px}}
     @keyframes modalIn{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
-    @media(max-width:600px){.product-modal-card{padding:22px 18px;border-radius:16px}.product-modal-card h2{font-size:24px}.product-modal-actions{flex-direction:column}.product-modal-actions a{width:100%}}
+    @media(max-width:600px){.product-modal-card{padding:24px 20px;border-radius:16px}.product-modal-card h2{font-size:25px}.product-modal-actions{flex-direction:column}.product-modal-actions a{width:100%}}
 
-    /* Individual Products Grid */
+
     .individual-products-heading{text-align:center;margin:42px 0 18px}
     .individual-products-heading h3{font-size:30px;margin:6px 0 0}
     .individual-products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;max-width:1100px;margin:0 auto}
@@ -71,44 +56,6 @@
     .products-cta-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
     .products-cta-actions .btn{text-decoration:none}
     @media(max-width:600px){.products-cta{padding:18px 14px}.products-cta-actions{flex-direction:column}.products-cta-actions .btn{width:100%}}
-
-    /* B2B Infrastructure, Beats & Bulk Banner */
-    .infra-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;max-width:1100px;margin:32px auto 0}
-    .infra-card{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:18px;padding:24px 20px;box-shadow:0 10px 26px rgba(0,0,0,.05);transition:transform .25s ease}
-    .infra-card:hover{transform:translateY(-5px)}
-    .infra-icon{font-size:28px;margin-bottom:12px;display:inline-block}
-    .infra-card h3{margin:0 0 8px;font-size:19px;color:#171717}
-    .infra-card p{margin:0;font-size:14.5px;line-height:1.55;color:#555}
-    @media(max-width:950px){.infra-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(max-width:550px){.infra-grid{grid-template-columns:1fr}}
-
-    .beats-box{max-width:1100px;margin:24px auto 0;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:18px;padding:24px;box-shadow:0 10px 26px rgba(0,0,0,.05);text-align:center}
-    .beats-box h3{margin:0 0 8px;font-size:20px}
-    .beats-box p{margin:0 0 16px;color:#555;font-size:15px}
-    .beat-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
-    .beat-tag{background:#f7f7f7;border:1px solid rgba(0,0,0,.1);padding:8px 16px;border-radius:999px;font-weight:600;font-size:14px;color:#222}
-
-    .bulk-banner{max-width:1100px;margin:32px auto 0;background:linear-gradient(135deg,#b80000,#850000);color:#fff;border-radius:20px;padding:28px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;box-shadow:0 16px 36px rgba(184,0,0,.22)}
-    .bulk-banner h3{margin:0 0 6px;font-size:24px;color:#fff}
-    .bulk-banner p{margin:0;color:rgba(255,255,255,.9);font-size:15px}
-
-    /* Quick Order Builder */
-    .order-builder-wrap{max-width:920px;margin:0 auto;background:#fff;border-radius:22px;padding:34px 30px;border:1px solid rgba(0,0,0,.08);box-shadow:0 16px 45px rgba(0,0,0,.08)}
-    .order-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:22px}
-    .order-field label{display:block;font-weight:700;font-size:13.5px;margin-bottom:6px;color:#222}
-    .order-field input,.order-item-row select,.order-item-row input{width:100%;padding:12px 14px;border:1px solid #d4d4d8;border-radius:12px;font-size:15px;font-family:inherit;box-sizing:border-box;background:#fafafa}
-    .order-field input:focus,.order-item-row select:focus,.order-item-row input:focus{outline:2px solid #d40000;background:#fff;border-color:transparent}
-    .order-items-list{display:flex;flex-direction:column;gap:12px;margin-bottom:16px}
-    .order-item-row{display:grid;grid-template-columns:2fr 1fr auto;gap:10px;align-items:center}
-    .remove-row-btn{background:#fee2e2;color:#b91c1c;border:0;width:44px;height:44px;border-radius:12px;font-size:18px;font-weight:700;cursor:pointer}
-    .add-row-btn{width:100%;padding:12px;border:1.5px dashed #a1a1aa;background:#fafafa;color:#27272a;font-weight:700;border-radius:12px;cursor:pointer;margin-bottom:22px;transition:background .2s}
-    .add-row-btn:hover{background:#f0f0f0}
-    .submit-order-btn{width:100%;padding:15px 20px;background:#25d366;color:#fff;border:0;border-radius:14px;font-size:16px;font-weight:800;cursor:pointer;box-shadow:0 10px 24px rgba(37,211,102,.3);transition:transform .2s ease}
-    .submit-order-btn:hover{transform:translateY(-2px)}
-    @media(max-width:650px){.order-builder-wrap{padding:24px 18px}.order-form-grid{grid-template-columns:1fr}.order-item-row{grid-template-columns:1fr 95px 42px}}
-
-    /* Map Embed */
-    .map-container{max-width:1100px;margin:26px auto 0;border-radius:18px;overflow:hidden;border:1px solid rgba(0,0,0,.1);box-shadow:0 10px 28px rgba(0,0,0,.08)}
 
     /* Premium scroll animations */
     html{scroll-behavior:smooth}
@@ -138,18 +85,14 @@
     @keyframes heroGlow{0%,100%{transform:translate3d(-2%,0,0) scale(1)}50%{transform:translate3d(2%,2%,0) scale(1.08)}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-copy,.hero:after{animation:none}.reveal,.hero-copy,.product-section .brand-watermark{transition:none!important;transform:none!important;opacity:1!important}}
   </style>
-
-  <!-- Enhanced LocalBusiness Schema -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"WholesaleStore",
     "name":"Tanya Agency",
-    "image":"https://tanya-agency-website.vercel.app/logo.png",
-    "description":"Wholesale distribution business serving Sidhpura and nearby areas of Kasganj with Coca-Cola beverages, Red Bull and Trimurti building materials.",
+    "description":"Wholesale distribution business serving Sidhpura and nearby areas with Coca-Cola beverages, Red Bull and Trimurti building materials.",
     "url":"https://tanya-agency-website.vercel.app/",
     "telephone":"+91-9557495828",
-    "priceRange":"₹₹",
     "address":{
       "@type":"PostalAddress",
       "streetAddress":"Etah-Amanpur Road, near PR Inter College",
@@ -157,15 +100,7 @@
       "addressRegion":"Uttar Pradesh",
       "postalCode":"207246",
       "addressCountry":"IN"
-    },
-    "areaServed":[
-      "Sidhpura",
-      "Kasganj",
-      "Ganj Dundwara",
-      "Amanpur",
-      "Patiali",
-      "Sahawar"
-    ]
+    }
   }
   </script>
 </head>
@@ -178,7 +113,6 @@
       <a href="#red-bull">Red Bull</a>
       <a href="#trimurti">Trimurti</a>
       <a href="#products">Products</a>
-      <a href="#quick-order">Quick Order</a>
       <a href="#contact">Contact</a>
     </nav>
     <a class="phone" href="tel:+919557495828">☎ 9557495828</a>
@@ -198,8 +132,7 @@
         </div>
         <div class="actions">
           <a class="btn primary" href="tel:+919557495828">Call Now</a>
-          <a class="btn whatsapp" href="https://wa.me/919557495828?text=Namaste%20Tanya%20Agency%2C%20mujhe%20wholesale%20supply%20aur%20rates%20ki%20jankari%20chahiye." target="_blank" rel="noopener">WhatsApp</a>
-          <a class="btn light" href="#quick-order">Create Order List</a>
+          <a class="btn whatsapp" href="https://wa.me/919557495828" target="_blank" rel="noopener">WhatsApp</a>
           <a class="btn light" href="https://maps.app.goo.gl/rcnekM3DYBApqjBEA?g_st=ac" target="_blank" rel="noopener">Google Maps</a>
         </div>
       </div>
@@ -217,46 +150,7 @@
         <span class="eyebrow">ABOUT TANYA AGENCY</span>
         <h2>A wholesale business built on long-term distribution experience.</h2>
       </div>
-      <p>Tanya Agency is a wholesale distribution business based on Etah-Amanpur Road, near PR Inter College, Sidhpura (Kasganj, Uttar Pradesh). We have been associated with Coca-Cola distribution for 25 years and Trimurti products for 6 years. We currently deal in Coca-Cola beverages, Red Bull and Trimurti building products, supplying retailers, contractors and businesses in the surrounding area.</p>
-
-      <!-- B2B Infrastructure & Logistics Cards -->
-      <div class="infra-grid">
-        <div class="infra-card">
-          <span class="infra-icon">🏭</span>
-          <h3>Dedicated Godown Storage</h3>
-          <p>High-capacity warehouse in Sidhpura ensuring batch-fresh beverages and moisture-safe storage for wall care products.</p>
-        </div>
-        <div class="infra-card">
-          <span class="infra-icon">🚚</span>
-          <h3>Ready Delivery Fleet</h3>
-          <p>Dedicated commercial pickup &amp; loader support for timely route dispatch to retail counters and construction sites.</p>
-        </div>
-        <div class="infra-card">
-          <span class="infra-icon">🛡️</span>
-          <h3>100% Genuine Stock</h3>
-          <p>Authorized wholesale channel guaranteeing authentic company stock, transparent pricing, and reliable seasonal supply.</p>
-        </div>
-        <div class="infra-card">
-          <span class="infra-icon">📋</span>
-          <h3>B2B &amp; GST Billing</h3>
-          <p>Proper wholesale invoicing for retailers, supermarkets, dhabas, restaurants, and civil contractors.</p>
-        </div>
-      </div>
-
-      <!-- Active Beats & Coverage -->
-      <div class="beats-box">
-        <h3>📍 Our Supply Territory &amp; Route Coverage</h3>
-        <p>Regular wholesale billing and order fulfillment across Sidhpura and surrounding markets in Kasganj district:</p>
-        <div class="beat-tags">
-          <span class="beat-tag">Sidhpura Town</span>
-          <span class="beat-tag">Kasganj</span>
-          <span class="beat-tag">Amanpur</span>
-          <span class="beat-tag">Ganj Dundwara</span>
-          <span class="beat-tag">Patiali</span>
-          <span class="beat-tag">Sahawar</span>
-          <span class="beat-tag">Etah-Amanpur Road Belt</span>
-        </div>
-      </div>
+      <p>Tanya Agency is a wholesale distribution business based in Sidhpura, Kasganj, Uttar Pradesh. We have been associated with Coca-Cola distribution for 25 years and Trimurti products for 6 years. We currently deal in Coca-Cola beverages, Red Bull and Trimurti building products, supplying retailers, contractors and businesses in the surrounding area.</p>
     </section>
 
     <section id="coca-cola" class="product-section red">
@@ -272,3 +166,288 @@
           <span role="button" tabindex="0" data-product="Coca-Cola">Coca-Cola</span>
           <span role="button" tabindex="0" data-product="Thums Up">Thums Up</span>
           <span role="button" tabindex="0" data-product="Sprite">Sprite</span>
+          <span role="button" tabindex="0" data-product="Fanta">Fanta</span>
+          <span role="button" tabindex="0" data-product="Limca">Limca</span>
+          <span role="button" tabindex="0" data-product="Maaza">Maaza</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="red-bull" class="product-section navy">
+      <img class="brand-watermark redbull" src="https://kwx34f0sv48hjozz.public.blob.vercel-storage.com/wordmark/redbull.com/1ce76872e8e47155144c8794cc597225.svg" alt="Red Bull logo watermark" aria-hidden="true">
+      <div class="section-inner">
+        <div>
+          <span class="eyebrow">RED BULL DISTRIBUTION</span>
+          <h2>Red Bull Wholesale Distribution</h2>
+          <p>Red Bull distribution through Tanya Agency, serving retailers and businesses in the local service area.</p>
+          <a class="btn light" href="#contact">Wholesale Enquiry</a>
+        </div>
+        <div class="single-product" role="button" tabindex="0" data-product="Red Bull Energy Drink">Red Bull Energy Drink</div>
+      </div>
+    </section>
+
+    <section id="trimurti" class="product-section green">
+      <img class="brand-watermark trimurti" src="https://cdn.brandfetch.io/idjM8r48Qa/w/1157/h/650/theme/dark/logo.png?c=1bxid64Mup7aczewSAYMX&t=1769089947362" alt="Trimurti logo watermark" aria-hidden="true">
+      <div class="section-inner">
+        <div>
+          <span class="eyebrow">TRIMURTI BUILDING PRODUCTS</span>
+          <h2>6 Years with Trimurti Products</h2>
+          <p>Wholesale distribution of Trimurti building products for retailers, contractors and businesses.</p>
+          <a class="btn light" href="#products">View Products</a>
+        </div>
+        <div class="product-list">
+          <span role="button" tabindex="0" data-product="Trimurti Wall Putty">Wall Putty</span>
+          <span role="button" tabindex="0" data-product="Trimurti POP">POP</span>
+          <span role="button" tabindex="0" data-product="Trimurti White Cement">White Cement</span>
+          <span role="button" tabindex="0" data-product="Trimurti Tile Adhesive">Tile Adhesive</span>
+          <span role="button" tabindex="0" data-product="Trimurti White Wash">White Wash</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section">
+      <div class="center">
+        <span class="eyebrow">OUR PRODUCTS</span>
+        <h2>Wholesale Product Range</h2>
+        <p>Explore our wholesale categories and individual products. Click any card for product details and wholesale enquiry.</p>
+      </div>
+      <div class="cards">
+        <article class="clickable-card" role="button" tabindex="0" data-product="Coca-Cola Beverages"><img class="card-product-image company-logo-image" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg" alt="Coca-Cola official logo"><h3>Coca-Cola Beverages</h3><p class="category-description">Coca-Cola, Thums Up, Sprite, Fanta, Limca and Maaza.</p></article>
+        <article class="clickable-card" role="button" tabindex="0" data-product="Red Bull Energy Drink"><img class="card-product-image company-logo-image" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Logo_of_Red_bull.svg" alt="Red Bull official logo"><h3>Red Bull</h3><p class="category-description">Red Bull Energy Drink wholesale distribution.</p></article>
+        <article class="clickable-card" role="button" tabindex="0" data-product="Trimurti Building Materials"><img class="card-product-image company-logo-image" src="https://msmemart.com/upload/memberprofiles/169365547499816927.jpg" alt="Trimurti Wall Care Products logo"><h3>Trimurti Wall Products</h3><p class="category-description">Wall Putty, POP, White Cement, Tile Adhesive and White Wash.</p></article>
+      </div>
+      <div class="individual-products-heading">
+        <span class="eyebrow">INDIVIDUAL PRODUCTS</span>
+        <h3>All Products</h3>
+      </div>
+      <div class="individual-products">
+        <span class="product-item" role="button" tabindex="0" data-product="Coca-Cola"><img class="product-thumb" src="https://pngimg.com/d/coca_cola_PNG8917.png" alt="Coca-Cola product image" loading="lazy"><span>Coca-Cola</span></span>
+        <span class="product-item" role="button" tabindex="0" data-product="Thums Up"><img class="product-thumb" src="https://w7.pngwing.com/pngs/945/391/png-transparent-thums-up-soda-bottle-illustration-coca-cola-fizzy-drinks-beer-pepsi-cold-drink-beer-bottle-cola-cola-wars.png" alt="Thums Up product image" loading="lazy"><span>Thums Up</span></span>
+        <span class="product-item" role="button" tabindex="0" data-product="Sprite"><img class="product-thumb" src="https://www.vishalmegamart.com/on/demandware.static/-/Sites-vmm-fmcg-master-catalog/default/dw768c4179/images/large/1310014961.jpg" alt="Sprite product image" loading="lazy"><span>Sprite</span></span>
+        <span class="product-item" role="button" tabindex="0" data-product="Fanta"><img class="product-thumb" src="https://cdn.grofers.com/cdn-cgi/image/f%3Dauto%2Cfit%3Dscale-down%2Cq%3D70%2Cmetadata%3Dnone%2Cw%3D1080/da/cms-assets/cms/product/rc-upload-1772682797673-145.png?bg_token=color.background.quaternary" alt="Fanta product image" loading="lazy"><span>Fanta</span></span>
+        <span class="product-item" role="button" tabindex="0" data-product="Limca"><img class="product-thumb" src="https://www.indiaathome.com.au/cdn/shop/files/Limca_750ml.png?v=1771592313" alt="Limca product image" loading="lazy"><span>Limca</span></span>
+        <span class="product-item" role="button" tabindex="0" data-product="Maaza"><img class="product-thumb" src="https://www.starquik.com/cdn/shop/files/SQ105002_FOP_a82b4638-54be-4ec2-b184-e9f1d1856dd4.jpg?v=1776846191" alt="Maaza product image" loading="lazy"><span>Maaza</span></span>
+        <span class="product-item" role="button" tabindex="0" data-product="Red Bull Energy Drink"><img class="product-thumb" src="https://images.apollo247.in/pub/media/catalog/product/R/E/RED0287_2_1.jpg" alt="Red Bull Energy Drink product image" loading="lazy"><span>Red Bull Energy Drink</span></span>
+        <span class="product-item" role="button" tabindex="0" data-product="Trimurti Wall Putty"><img class="product-thumb" src="https://cpimg.tistatic.com/9059685/b/9/trimurti-20-kg-expert-wall-putty.jpg" alt="Trimurti Wall Putty product image" loading="lazy"><span>Wall Putty</span></span>
+        <span class="product-item" role="button" tabindex="0" data-product="Trimurti POP"><img class="product-thumb" src="https://cpimg.tistatic.com/09766315/b/6/extra-09766315.jpeg" alt="Trimurti POP product image" loading="lazy"><span>POP</span></span>
+        <span class="product-item" role="button" tabindex="0" data-product="Trimurti White Cement"><img class="product-thumb" src="https://cpimg.tistatic.com/9810529/b/8/trimurti-50-kg-decorative-white-cement.jpeg" alt="Trimurti White Cement product image" loading="lazy"><span>White Cement</span></span>
+        <span class="product-item" role="button" tabindex="0" data-product="Trimurti Tile Adhesive"><img class="product-thumb" src="https://cpimg.tistatic.com/10435524/b/5/extra-10435524.jpeg" alt="Trimurti Tile Adhesive product image" loading="lazy"><span>Tile Adhesive</span></span>
+        <span class="product-item" role="button" tabindex="0" data-product="Trimurti White Wash"><img class="product-thumb" src="https://cpimg.tistatic.com/11711319/b/4/Trimurti-10Kg-Pearl-White-Wash.png" alt="Trimurti White Wash product image" loading="lazy"><span>White Wash</span></span>
+      </div>
+      <div class="products-cta">
+        <p>Need wholesale pricing or availability?</p>
+        <div class="products-cta-actions">
+          <a class="btn primary" href="tel:+919557495828">Call for Wholesale Enquiry</a>
+          <a class="btn whatsapp" href="https://wa.me/919557495828" target="_blank" rel="noopener">WhatsApp Wholesale Enquiry</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div>
+        <span class="eyebrow">CONTACT</span>
+        <h2>Talk to Tanya Agency</h2>
+        <p>Sidhpura, Kasganj, Uttar Pradesh</p>
+        <p><strong>Phone:</strong> 9557495828</p>
+      </div>
+      <div class="contact-actions">
+        <a class="btn primary" href="tel:+919557495828">Call 9557495828</a>
+        <a class="btn whatsapp" href="https://wa.me/919557495828" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn light" href="https://maps.app.goo.gl/rcnekM3DYBApqjBEA?g_st=ac" target="_blank" rel="noopener">Open Google Maps</a>
+      </div>
+    </section>
+  </main>
+
+  <div class="product-modal" id="productModal" aria-hidden="true">
+    <div class="product-modal-card" role="dialog" aria-modal="true" aria-labelledby="productModalTitle">
+      <button class="product-modal-close" type="button" aria-label="Close">×</button>
+      <img class="product-modal-image" id="productModalImage" src="" alt="Product image">
+      <h2 id="productModalTitle"></h2>
+      <p id="productModalDescription"></p>
+      <div style="display:grid;gap:10px;margin:14px 0;text-align:left">
+        <label for="customerName" style="font-weight:700;font-size:14px">Your Name</label>
+        <input id="customerName" type="text" autocomplete="name" placeholder="Enter your name" style="width:100%;padding:12px 14px;border:1px solid #ddd;border-radius:10px;font:inherit;box-sizing:border-box">
+        <small id="locationStatus" style="font-size:12px;opacity:.75">Your location can be added to the WhatsApp message after you allow location access.</small>
+      </div>
+      <div class="product-modal-actions">
+        <a class="btn primary" href="tel:+919557495828">Call Now</a>
+        <a class="btn whatsapp" id="productWhatsApp" href="https://wa.me/919557495828" target="_blank" rel="noopener">WhatsApp Enquiry</a>
+      </div>
+      <p class="product-modal-note">Wholesale supply for retailers, contractors and businesses in Sidhpura and nearby areas.</p>
+    </div>
+  </div>
+
+  <footer>
+    <img src="logo.png" alt="Tanya Agency">
+    <p>© 2026 Tanya Agency • Sidhpura, Kasganj, Uttar Pradesh</p>
+  </footer>
+
+  <script>
+    const productImages = {
+      "Coca-Cola": "https://pngimg.com/d/coca_cola_PNG8917.png",
+      "Thums Up": "https://w7.pngwing.com/pngs/945/391/png-transparent-thums-up-soda-bottle-illustration-coca-cola-fizzy-drinks-beer-pepsi-cold-drink-beer-bottle-cola-cola-wars.png",
+      "Sprite": "https://www.vishalmegamart.com/on/demandware.static/-/Sites-vmm-fmcg-master-catalog/default/dw768c4179/images/large/1310014961.jpg",
+      "Fanta": "https://cdn.grofers.com/cdn-cgi/image/f%3Dauto%2Cfit%3Dscale-down%2Cq%3D70%2Cmetadata%3Dnone%2Cw%3D1080/da/cms-assets/cms/product/rc-upload-1772682797673-145.png?bg_token=color.background.quaternary",
+      "Limca": "https://www.indiaathome.com.au/cdn/shop/files/Limca_750ml.png?v=1771592313",
+      "Maaza": "https://www.starquik.com/cdn/shop/files/SQ105002_FOP_a82b4638-54be-4ec2-b184-e9f1d1856dd4.jpg?v=1776846191",
+      "Red Bull Energy Drink": "https://images.apollo247.in/pub/media/catalog/product/R/E/RED0287_2_1.jpg",
+      "Trimurti Wall Putty": "https://cpimg.tistatic.com/9059685/b/9/trimurti-20-kg-expert-wall-putty.jpg",
+      "Trimurti POP": "https://cpimg.tistatic.com/09766315/b/6/extra-09766315.jpeg",
+      "Trimurti White Cement": "https://cpimg.tistatic.com/9810529/b/8/trimurti-50-kg-decorative-white-cement.jpeg",
+      "Trimurti Tile Adhesive": "https://cpimg.tistatic.com/10435524/b/5/extra-10435524.jpeg",
+      "Trimurti White Wash": "https://cpimg.tistatic.com/11711319/b/4/Trimurti-10Kg-Pearl-White-Wash.png",
+      "Coca-Cola Beverages": "https://pngimg.com/d/coca_cola_PNG8917.png",
+      "Trimurti Building Materials": "https://cpimg.tistatic.com/9810529/b/8/trimurti-50-kg-decorative-white-cement.jpeg"
+    };
+
+    const productInfo = {
+      "Coca-Cola": "Coca-Cola beverage available through Tanya Agency, Sidhpura. Wholesale distribution for retailers and businesses in Sidhpura and nearby areas.",
+      "Thums Up": "Thums Up beverage available through Tanya Agency, Sidhpura. Wholesale distribution for retailers and businesses in Sidhpura and nearby areas.",
+      "Sprite": "Sprite beverage available through Tanya Agency, Sidhpura. Wholesale distribution for retailers and businesses in Sidhpura and nearby areas.",
+      "Fanta": "Fanta beverage available through Tanya Agency, Sidhpura. Wholesale distribution for retailers and businesses in Sidhpura and nearby areas.",
+      "Limca": "Limca beverage available through Tanya Agency, Sidhpura. Wholesale distribution for retailers and businesses in Sidhpura and nearby areas.",
+      "Maaza": "Maaza beverage available through Tanya Agency, Sidhpura. Wholesale distribution for retailers and businesses in Sidhpura and nearby areas.",
+      "Red Bull Energy Drink": "Red Bull Energy Drink available through Tanya Agency, Sidhpura. Wholesale distribution for retailers and businesses in Sidhpura and nearby areas.",
+      "Trimurti Wall Putty": "Trimurti Wall Putty available through Tanya Agency, Sidhpura. Wholesale distribution for retailers, contractors and businesses in Sidhpura and nearby areas. Tanya Agency has been associated with Trimurti products for 6 years.",
+      "Trimurti POP": "Trimurti POP available through Tanya Agency, Sidhpura. Wholesale distribution for retailers, contractors and businesses in Sidhpura and nearby areas. Tanya Agency has been associated with Trimurti products for 6 years.",
+      "Trimurti White Cement": "Trimurti White Cement available through Tanya Agency, Sidhpura. Wholesale distribution for retailers, contractors and businesses in Sidhpura and nearby areas. Tanya Agency has been associated with Trimurti products for 6 years.",
+      "Trimurti Tile Adhesive": "Trimurti Tile Adhesive available through Tanya Agency, Sidhpura. Wholesale distribution for retailers, contractors and businesses in Sidhpura and nearby areas. Tanya Agency has been associated with Trimurti products for 6 years.",
+      "Trimurti White Wash": "Trimurti White Wash available through Tanya Agency, Sidhpura. Wholesale distribution for retailers, contractors and businesses in Sidhpura and nearby areas. Tanya Agency has been associated with Trimurti products for 6 years.",
+      "Coca-Cola Beverages": "Coca-Cola, Thums Up, Sprite, Fanta, Limca and Maaza are available through Tanya Agency, Sidhpura for wholesale distribution to retailers and businesses.",
+      "Trimurti Building Materials": "Trimurti building materials including Wall Putty, POP, White Cement, Tile Adhesive and White Wash are available through Tanya Agency, Sidhpura for wholesale supply."
+    };
+
+    const modal = document.getElementById('productModal');
+    const title = document.getElementById('productModalTitle');
+    const description = document.getElementById('productModalDescription');
+    const modalImage = document.getElementById('productModalImage');
+    const productWhatsApp = document.getElementById('productWhatsApp');
+    const customerName = document.getElementById('customerName');
+    const locationStatus = document.getElementById('locationStatus');
+    let activeProductName = '';
+    let customerLocation = null;
+
+    document.querySelectorAll('[data-product]').forEach((el) => {
+      const name = el.dataset.product;
+      const src = productImages[name];
+      if (!src) return;
+      if (el.classList.contains('clickable-card')) {
+        // Company cards already contain their official logo; keep the logo instead of replacing it with a product photo.
+      } else if (!el.querySelector('.product-thumb')) {
+        const img = document.createElement('img');
+        img.className = 'product-thumb';
+        img.src = src;
+        img.alt = name + ' product image';
+        img.loading = 'lazy';
+        el.prepend(img);
+      }
+    });
+
+    function openProduct(name) {
+      title.textContent = name;
+      modalImage.src = productImages[name] || productImages['Coca-Cola Beverages'];
+      modalImage.alt = name + ' product image';
+      description.textContent = productInfo[name] || (name + " available through Tanya Agency, Sidhpura. Contact us for wholesale availability and enquiry.");
+      activeProductName = name;
+      customerLocation = null;
+      locationStatus.textContent = 'Your location can be added to the WhatsApp message after you allow location access.';
+      const savedName = localStorage.getItem('tanyaCustomerName');
+      if (savedName && !customerName.value) customerName.value = savedName;
+      productWhatsApp.href = `https://wa.me/919557495828?text=${encodeURIComponent(`Hello Tanya Agency, I want to enquire about ${name}. Please share the wholesale price and availability.`)}`;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+
+    productWhatsApp.addEventListener('click', function(e) {
+      e.preventDefault();
+      const name = customerName.value.trim();
+      if (name) localStorage.setItem('tanyaCustomerName', name);
+
+      const openWhatsApp = (locationText = '') => {
+        const customer = name || 'Customer';
+        const message = `Hello Tanya Agency, I want to enquire about ${activeProductName}.\n\nCustomer Name: ${customer}${locationText ? `\nLocation: ${locationText}` : ''}\n\nPlease share the wholesale price and availability.`;
+        window.open(`https://wa.me/919557495828?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+      };
+
+      if (!navigator.geolocation) {
+        locationStatus.textContent = 'Location is not supported by this browser. Enquiry will be sent without location.';
+        openWhatsApp();
+        return;
+      }
+
+      locationStatus.textContent = 'Getting your location…';
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          customerLocation = position.coords;
+          const mapsLink = `https://www.google.com/maps?q=${position.coords.latitude},${position.coords.longitude}`;
+          locationStatus.textContent = 'Location added to the WhatsApp message.';
+          openWhatsApp(mapsLink);
+        },
+        () => {
+          locationStatus.textContent = 'Location permission was not given. Enquiry will be sent without location.';
+          openWhatsApp();
+        },
+        { enableHighAccuracy: true, timeout: 8000, maximumAge: 300000 }
+      );
+    });
+
+    function closeProduct() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('[data-product]').forEach((el) => {
+      el.addEventListener('click', () => openProduct(el.dataset.product));
+      el.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openProduct(el.dataset.product);
+        }
+      });
+    });
+
+    document.querySelector('.product-modal-close').addEventListener('click', closeProduct);
+    modal.addEventListener('click', (event) => { if (event.target === modal) closeProduct(); });
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeProduct(); });
+
+
+    // Scroll reveal + animated counters + active navigation
+    const revealItems = document.querySelectorAll('.trust>div,.section>div,.section>p,.product-section .section-inner>div,.contact>div,.cards .clickable-card');
+    revealItems.forEach(el=>el.classList.add('reveal'));
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    },{threshold:.14,rootMargin:'0px 0px -50px 0px'});
+    revealItems.forEach(el=>io.observe(el));
+    document.querySelectorAll('.product-section').forEach(sec=>io.observe(sec));
+
+    const nav=document.querySelector('.nav');
+    const onScroll=()=>nav && nav.classList.toggle('scrolled',window.scrollY>30);
+    onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+
+    // Count-up numbers when the stats enter the screen
+    const counters=document.querySelectorAll('.stats strong');
+    const counterObserver=new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(!entry.isIntersecting) return;
+        const el=entry.target, target=parseInt(el.textContent.replace(/\D/g,''),10)||0;
+        const duration=1100, start=performance.now();
+        const tick=(now)=>{
+          const p=Math.min((now-start)/duration,1), eased=1-Math.pow(1-p,3);
+          el.textContent=Math.round(target*eased);
+          if(p<1) requestAnimationFrame(tick); else el.textContent=target;
+        };
+        requestAnimationFrame(tick); counterObserver.unobserve(el);
+      });
+    },{threshold:.8});
+    counters.forEach(el=>counterObserver.observe(el));
+  </script>
+</body>
+</html>
