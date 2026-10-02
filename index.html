@@ -31,7 +31,7 @@
     .product-modal-image{width:100%;height:250px;object-fit:contain;background:#f7f7f7;border-radius:14px;margin:0 0 20px;padding:12px;display:block}
     [data-product]{display:inline-flex!important;align-items:center;gap:10px}
     [data-product] .product-thumb{width:48px;height:48px;object-fit:contain;background:rgba(255,255,255,.96);border-radius:10px;padding:3px;flex:0 0 48px}
-    .clickable-card .card-product-image{width:100%;height:180px;object-fit:contain;background:#f7f7f7;border-radius:14px;margin-bottom:18px;padding:10px}
+    .clickable-card .card-product-image{width:100%;height:120px;object-fit:contain;background:#f7f7f7;border-radius:14px;margin-bottom:18px;padding:10px}
     .single-product .product-thumb{width:80px;height:80px;flex-basis:80px}
     @media(max-width:600px){.product-modal-image{height:210px}.single-product .product-thumb{width:64px;height:64px;flex-basis:64px}}
     @keyframes modalIn{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
@@ -54,7 +54,7 @@
     .product-list span:hover,.single-product:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 12px 30px rgba(0,0,0,.16)}
     .clickable-card{transition:transform .3s ease,box-shadow .3s ease,opacity .8s ease!important}
     .clickable-card:hover{transform:translateY(-10px)!important;box-shadow:0 22px 45px rgba(0,0,0,.14)}
-    .clickable-card .card-product-image{transition:transform .45s ease}
+    .clickable-card .card-product-image{transition:transform .45s ease}.company-logo-image{object-fit:contain!important;background:transparent!important;padding:14px!important;height:120px!important}
     .clickable-card:hover .card-product-image{transform:scale(1.06)}
     .stats strong{display:inline-block;min-width:2ch}
     .hero{position:relative;overflow:hidden}
@@ -191,9 +191,9 @@
         <p>Click any product category to see its description and contact Tanya Agency for wholesale enquiries.</p>
       </div>
       <div class="cards">
-        <article class="clickable-card" role="button" tabindex="0" data-product="Coca-Cola Beverages"><img class="card-product-image" alt="Coca-Cola beverages"><h3>Coca-Cola Beverages</h3><p>Coca-Cola, Thums Up, Sprite, Fanta, Limca and Maaza.</p></article>
-        <article class="clickable-card" role="button" tabindex="0" data-product="Red Bull Energy Drink"><img class="card-product-image" alt="Red Bull Energy Drink"><h3>Red Bull</h3><p>Red Bull Energy Drink wholesale distribution.</p></article>
-        <article class="clickable-card" role="button" tabindex="0" data-product="Trimurti Building Materials"><img class="card-product-image" alt="Trimurti building materials"><h3>Trimurti</h3><p>Wall Putty, POP, White Cement, Tile Adhesive and White Wash.</p></article>
+        <article class="clickable-card" role="button" tabindex="0" data-product="Coca-Cola Beverages"><img class="card-product-image company-logo-image" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg" alt="Coca-Cola official logo"><h3>Coca-Cola Beverages</h3><p>Coca-Cola, Thums Up, Sprite, Fanta, Limca and Maaza.</p></article>
+        <article class="clickable-card" role="button" tabindex="0" data-product="Red Bull Energy Drink"><img class="card-product-image company-logo-image" src="https://clipartcraft.com/images/red-bull-logo-official-transparent.png" alt="Red Bull official logo"><h3>Red Bull</h3><p>Red Bull Energy Drink wholesale distribution.</p></article>
+        <article class="clickable-card" role="button" tabindex="0" data-product="Trimurti Building Materials"><img class="card-product-image company-logo-image" src="https://msmemart.com/upload/memberprofiles/169365547499816927.jpg" alt="Trimurti Wall Care Products logo"><h3>Trimurti Wall Products</h3><p>Wall Putty, POP, White Cement, Tile Adhesive and White Wash.</p></article>
       </div>
     </section>
 
@@ -276,8 +276,7 @@
       const src = productImages[name];
       if (!src) return;
       if (el.classList.contains('clickable-card')) {
-        const img = el.querySelector('.card-product-image');
-        if (img) { img.src = src; img.alt = name + ' product image'; }
+        // Company cards already contain their official logo; keep the logo instead of replacing it with a product photo.
       } else if (!el.querySelector('.product-thumb')) {
         const img = document.createElement('img');
         img.className = 'product-thumb';
