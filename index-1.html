@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tanya Agency | Coca-Cola, Red Bull & Trimurti Distributor in Sidhpura</title>
+  <meta name="description" content="Tanya Agency is a wholesale distribution business in Sidhpura, Kasganj, Uttar Pradesh, associated with Coca-Cola distribution for 25 years and Trimurti products for 6 years. We also distribute Red Bull and serve retailers and businesses in nearby areas.">
+  <meta name="theme-color" content="#d40000">
+  <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .product-list span,.single-product{cursor:pointer;transition:transform .2s ease,background .2s ease}
+    .product-list span:hover,.single-product:hover{transform:translateY(-2px)}
+    .product-list span:focus-visible,.single-product:focus-visible{outline:3px solid rgba(255,255,255,.8);outline-offset:3px}
+    .product-modal{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.68)}
+    .product-modal.open{display:flex}
+    .product-modal-card{width:min(560px,100%);background:#fff;border-radius:20px;box-shadow:0 25px 80px rgba(0,0,0,.35);padding:30px;position:relative;color:#171717;animation:modalIn .18s ease-out}
+    .product-modal-card h2{margin:0 40px 10px 0;font-size:30px;line-height:1.15}
+    .product-modal-card p{margin:0 0 22px;line-height:1.65;color:#4b4b4b}
+    .product-modal-close{position:absolute;right:14px;top:12px;width:42px;height:42px;border:0;border-radius:50%;background:#f2f2f2;font-size:27px;cursor:pointer;line-height:1}
+    .product-modal-actions{display:flex;gap:10px;flex-wrap:wrap}
+    .product-modal-actions a{display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
+    .product-modal-note{font-size:13px!important;color:#777!important;margin-top:16px!important;margin-bottom:0!important}
+    .product-modal-image{width:100%;height:250px;object-fit:contain;background:#f7f7f7;border-radius:14px;margin:0 0 20px;padding:12px;display:block}
+    [data-product]{display:inline-flex!important;align-items:center;gap:10px}
+    [data-product] .product-thumb{width:48px;height:48px;object-fit:contain;background:rgba(255,255,255,.96);border-radius:10px;padding:3px;flex:0 0 48px}
+    .clickable-card .card-product-image{width:100%;height:180px;object-fit:contain;background:#f7f7f7;border-radius:14px;margin-bottom:18px;padding:10px}
+    .single-product .product-thumb{width:80px;height:80px;flex-basis:80px}
+    @media(max-width:600px){.product-modal-image{height:210px}.single-product .product-thumb{width:64px;height:64px;flex-basis:64px}}
+    @keyframes modalIn{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
+    @media(max-width:600px){.product-modal-card{padding:24px 20px;border-radius:16px}.product-modal-card h2{font-size:25px}.product-modal-actions{flex-direction:column}.product-modal-actions a{width:100%}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WholesaleStore",
+    "name":"Tanya Agency",
+    "description":"Wholesale distribution business serving Sidhpura and nearby areas with Coca-Cola beverages, Red Bull and Trimurti building materials.",
+    "url":"https://tanya-agency-website.vercel.app/",
+    "telephone":"+91-9557495828",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Etah-Amanpur Road, near PR Inter College",
+      "addressLocality":"Sidhpura",
+      "addressRegion":"Uttar Pradesh",
+      "postalCode":"207246",
+      "addressCountry":"IN"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#home"><img src="logo.png" alt="Tanya Agency logo"></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#coca-cola">Coca-Cola</a>
+      <a href="#red-bull">Red Bull</a>
+      <a href="#trimurti">Trimurti</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="phone" href="tel:+919557495828">☎ 9557495828</a>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">WHOLESALE DISTRIBUTION • SIDHPURA</span>
+        <h1>Tanya Agency</h1>
+        <h2>Coca-Cola, Red Bull &amp; Trimurti Wholesale Distribution</h2>
+        <p>Serving retailers, contractors and businesses in Sidhpura and nearby areas of Kasganj, Uttar Pradesh.</p>
+        <div class="stats">
+          <div><strong>25</strong><span>Years Coca-Cola<br>distribution</span></div>
+          <div><strong>2026</strong><span>Red Bull<br>distribution</span></div>
+          <div><strong>6</strong><span>Years Trimurti<br>products</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="tel:+919557495828">Call Now</a>
+          <a class="btn whatsapp" href="https://wa.me/919557495828" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn light" href="https://maps.app.goo.gl/rcnekM3DYBApqjBEA?g_st=ac" target="_blank" rel="noopener">Google Maps</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust">
+      <div><b>Wholesale Distribution</b><span>For retailers, contractors &amp; businesses</span></div>
+      <div><b>Wide Product Range</b><span>Beverages &amp; building materials</span></div>
+      <div><b>Genuine Supply</b><span>Established wholesale business</span></div>
+      <div><b>Sidhpura &amp; Nearby Areas</b><span>Kasganj, Uttar Pradesh</span></div>
+    </section>
+
+    <section id="about" class="section">
+      <div>
+        <span class="eyebrow">ABOUT TANYA AGENCY</span>
+        <h2>A wholesale business built on long-term distribution experience.</h2>
+      </div>
+      <p>Tanya Agency is a wholesale distribution business based in Sidhpura, Kasganj, Uttar Pradesh. We have been associated with Coca-Cola distribution for 25 years and Trimurti products for 6 years. We currently deal in Coca-Cola beverages, Red Bull and Trimurti building products, supplying retailers, contractors and businesses in the surrounding area.</p>
+    </section>
+
+    <section id="coca-cola" class="product-section red">
+      <div class="section-inner">
+        <div>
+          <span class="eyebrow">COCA-COLA DISTRIBUTION</span>
+          <h2>25 Years of Coca-Cola Distribution</h2>
+          <p>Wholesale distribution of Coca-Cola beverages for retailers and businesses in Sidhpura and nearby areas.</p>
+          <a class="btn light" href="#products">View Products</a>
+        </div>
+        <div class="product-list">
+          <span role="button" tabindex="0" data-product="Coca-Cola">Coca-Cola</span>
+          <span role="button" tabindex="0" data-product="Thums Up">Thums Up</span>
+          <span role="button" tabindex="0" data-product="Sprite">Sprite</span>
+          <span role="button" tabindex="0" data-product="Fanta">Fanta</span>
+          <span role="button" tabindex="0" data-product="Limca">Limca</span>
+          <span role="button" tabindex="0" data-product="Maaza">Maaza</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="red-bull" class="product-section navy">
+      <div class="section-inner">
+        <div>
+          <span class="eyebrow">RED BULL DISTRIBUTION</span>
+          <h2>Red Bull Wholesale Distribution</h2>
+          <p>Red Bull distribution through Tanya Agency, serving retailers and businesses in the local service area.</p>
+          <a class="btn light" href="#contact">Wholesale Enquiry</a>
+        </div>
+        <div class="single-product" role="button" tabindex="0" data-product="Red Bull Energy Drink">Red Bull Energy Drink</div>
+      </div>
+    </section>
+
+    <section id="trimurti" class="product-section green">
+      <div class="section-inner">
+        <div>
+          <span class="eyebrow">TRIMURTI BUILDING PRODUCTS</span>
+          <h2>6 Years with Trimurti Products</h2>
+          <p>Wholesale distribution of Trimurti building products for retailers, contractors and businesses.</p>
+          <a class="btn light" href="#products">View Products</a>
+        </div>
+        <div class="product-list">
+          <span role="button" tabindex="0" data-product="Trimurti Wall Putty">Wall Putty</span>
+          <span role="button" tabindex="0" data-product="Trimurti POP">POP</span>
+          <span role="button" tabindex="0" data-product="Trimurti White Cement">White Cement</span>
+          <span role="button" tabindex="0" data-product="Trimurti Tile Adhesive">Tile Adhesive</span>
+          <span role="button" tabindex="0" data-product="Trimurti White Wash">White Wash</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section">
+      <div class="center">
+        <span class="eyebrow">OUR PRODUCTS</span>
+        <h2>Wholesale Product Range</h2>
+        <p>Click any product category to see its description and contact Tanya Agency for wholesale enquiries.</p>
+      </div>
+      <div class="cards">
+        <article class="clickable-card" role="button" tabindex="0" data-product="Coca-Cola Beverages"><img class="card-product-image" alt="Coca-Cola beverages"><h3>Coca-Cola Beverages</h3><p>Coca-Cola, Thums Up, Sprite, Fanta, Limca and Maaza.</p></article>
+        <article class="clickable-card" role="button" tabindex="0" data-product="Red Bull Energy Drink"><img class="card-product-image" alt="Red Bull Energy Drink"><h3>Red Bull</h3><p>Red Bull Energy Drink wholesale distribution.</p></article>
+        <article class="clickable-card" role="button" tabindex="0" data-product="Trimurti Building Materials"><img class="card-product-image" alt="Trimurti building materials"><h3>Trimurti</h3><p>Wall Putty, POP, White Cement, Tile Adhesive and White Wash.</p></article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div>
+        <span class="eyebrow">CONTACT</span>
+        <h2>Talk to Tanya Agency</h2>
+        <p>Sidhpura, Kasganj, Uttar Pradesh</p>
+        <p><strong>Phone:</strong> 9557495828</p>
+      </div>
+      <div class="contact-actions">
+        <a class="btn primary" href="tel:+919557495828">Call 9557495828</a>
+        <a class="btn whatsapp" href="https://wa.me/919557495828" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn light" href="https://maps.app.goo.gl/rcnekM3DYBApqjBEA?g_st=ac" target="_blank" rel="noopener">Open Google Maps</a>
+      </div>
+    </section>
+  </main>
+
+  <div class="product-modal" id="productModal" aria-hidden="true">
+    <div class="product-modal-card" role="dialog" aria-modal="true" aria-labelledby="productModalTitle">
+      <button class="product-modal-close" type="button" aria-label="Close">×</button>
+      <img class="product-modal-image" id="productModalImage" src="" alt="Product image">
+      <h2 id="productModalTitle"></h2>
+      <p id="productModalDescription"></p>
+      <div class="product-modal-actions">
+        <a class="btn primary" href="tel:+919557495828">Call Now</a>
+        <a class="btn whatsapp" href="https://wa.me/919557495828" target="_blank" rel="noopener">WhatsApp Enquiry</a>
+      </div>
+      <p class="product-modal-note">Wholesale supply for retailers, contractors and businesses in Sidhpura and nearby areas.</p>
+    </div>
+  </div>
+
+  <footer>
+    <img src="logo.png" alt="Tanya Agency">
+    <p>© 2026 Tanya Agency • Sidhpura, Kasganj, Uttar Pradesh</p>
+  </footer>
+
+  <script>
+    const productImages = {
+      "Coca-Cola": "https://bazaar5.com/image/cache/catalog/pro/product/apiData/251023-coca-cola-soft-drink-750-ml-0-1000x1000.jpg",
+      "Thums Up": "https://www.indiaathome.com.au/cdn/shop/files/Thums_up_750ml.png?v=1774420149",
+      "Sprite": "https://www.vishalmegamart.com/on/demandware.static/-/Sites-vmm-fmcg-master-catalog/default/dw768c4179/images/large/1310014961.jpg",
+      "Fanta": "https://cdn.grofers.com/cdn-cgi/image/f%3Dauto%2Cfit%3Dscale-down%2Cq%3D70%2Cmetadata%3Dnone%2Cw%3D1080/da/cms-assets/cms/product/rc-upload-1772682797673-145.png?bg_token=color.background.quaternary",
+      "Limca": "https://www.indiaathome.com.au/cdn/shop/files/Limca_750ml.png?v=1771592313",
+      "Maaza": "https://www.silkrute.co.nz/images/detailed/4188/61Byqlfo0vL.jpg",
+      "Red Bull Energy Drink": "https://images.apollo247.in/pub/media/catalog/product/R/E/RED0287_2_1.jpg",
+      "Trimurti Wall Putty": "https://cpimg.tistatic.com/9059685/b/9/trimurti-20-kg-expert-wall-putty.jpg",
+      "Trimurti POP": "https://cpimg.tistatic.com/09766315/b/6/extra-09766315.jpeg",
+      "Trimurti White Cement": "https://cpimg.tistatic.com/9810529/b/8/trimurti-50-kg-decorative-white-cement.jpeg",
+      "Trimurti Tile Adhesive": "https://cpimg.tistatic.com/10435524/b/5/extra-10435524.jpeg",
+      "Trimurti White Wash": "https://cpimg.tistatic.com/11711319/b/4/Trimurti-10Kg-Pearl-White-Wash.png",
+      "Coca-Cola Beverages": "https://bazaar5.com/image/cache/catalog/pro/product/apiData/251023-coca-cola-soft-drink-750-ml-0-1000x1000.jpg",
+      "Trimurti Building Materials": "https://cpimg.tistatic.com/9810529/b/8/trimurti-50-kg-decorative-white-cement.jpeg"
+    };
+
+    const productInfo = {
+      "Coca-Cola": "Coca-Cola beverage available through Tanya Agency, Sidhpura. Wholesale distribution for retailers and businesses in Sidhpura and nearby areas.",
+      "Thums Up": "Thums Up beverage available through Tanya Agency, Sidhpura. Wholesale distribution for retailers and businesses in Sidhpura and nearby areas.",
+      "Sprite": "Sprite beverage available through Tanya Agency, Sidhpura. Wholesale distribution for retailers and businesses in Sidhpura and nearby areas.",
+      "Fanta": "Fanta beverage available through Tanya Agency, Sidhpura. Wholesale distribution for retailers and businesses in Sidhpura and nearby areas.",
+      "Limca": "Limca beverage available through Tanya Agency, Sidhpura. Wholesale distribution for retailers and businesses in Sidhpura and nearby areas.",
+      "Maaza": "Maaza beverage available through Tanya Agency, Sidhpura. Wholesale distribution for retailers and businesses in Sidhpura and nearby areas.",
+      "Red Bull Energy Drink": "Red Bull Energy Drink available through Tanya Agency, Sidhpura. Wholesale distribution for retailers and businesses in Sidhpura and nearby areas.",
+      "Trimurti Wall Putty": "Trimurti Wall Putty available through Tanya Agency, Sidhpura. Wholesale distribution for retailers, contractors and businesses in Sidhpura and nearby areas. Tanya Agency has been associated with Trimurti products for 6 years.",
+      "Trimurti POP": "Trimurti POP available through Tanya Agency, Sidhpura. Wholesale distribution for retailers, contractors and businesses in Sidhpura and nearby areas. Tanya Agency has been associated with Trimurti products for 6 years.",
+      "Trimurti White Cement": "Trimurti White Cement available through Tanya Agency, Sidhpura. Wholesale distribution for retailers, contractors and businesses in Sidhpura and nearby areas. Tanya Agency has been associated with Trimurti products for 6 years.",
+      "Trimurti Tile Adhesive": "Trimurti Tile Adhesive available through Tanya Agency, Sidhpura. Wholesale distribution for retailers, contractors and businesses in Sidhpura and nearby areas. Tanya Agency has been associated with Trimurti products for 6 years.",
+      "Trimurti White Wash": "Trimurti White Wash available through Tanya Agency, Sidhpura. Wholesale distribution for retailers, contractors and businesses in Sidhpura and nearby areas. Tanya Agency has been associated with Trimurti products for 6 years.",
+      "Coca-Cola Beverages": "Coca-Cola, Thums Up, Sprite, Fanta, Limca and Maaza are available through Tanya Agency, Sidhpura for wholesale distribution to retailers and businesses.",
+      "Trimurti Building Materials": "Trimurti building materials including Wall Putty, POP, White Cement, Tile Adhesive and White Wash are available through Tanya Agency, Sidhpura for wholesale supply."
+    };
+
+    const modal = document.getElementById('productModal');
+    const title = document.getElementById('productModalTitle');
+    const description = document.getElementById('productModalDescription');
+    const modalImage = document.getElementById('productModalImage');
+
+    document.querySelectorAll('[data-product]').forEach((el) => {
+      const name = el.dataset.product;
+      const src = productImages[name];
+      if (!src) return;
+      if (el.classList.contains('clickable-card')) {
+        const img = el.querySelector('.card-product-image');
+        if (img) { img.src = src; img.alt = name + ' product image'; }
+      } else if (!el.querySelector('.product-thumb')) {
+        const img = document.createElement('img');
+        img.className = 'product-thumb';
+        img.src = src;
+        img.alt = name + ' product image';
+        img.loading = 'lazy';
+        el.prepend(img);
+      }
+    });
+
+    function openProduct(name) {
+      title.textContent = name;
+      modalImage.src = productImages[name] || productImages['Coca-Cola Beverages'];
+      modalImage.alt = name + ' product image';
+      description.textContent = productInfo[name] || (name + " available through Tanya Agency, Sidhpura. Contact us for wholesale availability and enquiry.");
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProduct() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('[data-product]').forEach((el) => {
+      el.addEventListener('click', () => openProduct(el.dataset.product));
+      el.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openProduct(el.dataset.product);
+        }
+      });
+    });
+
+    document.querySelector('.product-modal-close').addEventListener('click', closeProduct);
+    modal.addEventListener('click', (event) => { if (event.target === modal) closeProduct(); });
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeProduct(); });
+  </script>
+</body>
+</html>
