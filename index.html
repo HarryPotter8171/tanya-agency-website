@@ -264,6 +264,11 @@
       <img class="product-modal-image" id="productModalImage" src="" alt="Product image">
       <h2 id="productModalTitle"></h2>
       <p id="productModalDescription"></p>
+      <div style="display:grid;gap:10px;margin:14px 0;text-align:left">
+        <label for="customerName" style="font-weight:700;font-size:14px">Your Name</label>
+        <input id="customerName" type="text" autocomplete="name" placeholder="Enter your name" style="width:100%;padding:12px 14px;border:1px solid #ddd;border-radius:10px;font:inherit;box-sizing:border-box">
+        <small id="locationStatus" style="font-size:12px;opacity:.75">Your location can be added to the WhatsApp message after you allow location access.</small>
+      </div>
       <div class="product-modal-actions">
         <a class="btn primary" href="tel:+919557495828">Call Now</a>
         <a class="btn whatsapp" id="productWhatsApp" href="https://wa.me/919557495828" target="_blank" rel="noopener">WhatsApp Enquiry</a>
@@ -317,6 +322,10 @@
     const description = document.getElementById('productModalDescription');
     const modalImage = document.getElementById('productModalImage');
     const productWhatsApp = document.getElementById('productWhatsApp');
+    const customerName = document.getElementById('customerName');
+    const locationStatus = document.getElementById('locationStatus');
+    let activeProductName = '';
+    let customerLocation = null;
 
     document.querySelectorAll('[data-product]').forEach((el) => {
       const name = el.dataset.product;
@@ -339,12 +348,50 @@
       modalImage.src = productImages[name] || productImages['Coca-Cola Beverages'];
       modalImage.alt = name + ' product image';
       description.textContent = productInfo[name] || (name + " available through Tanya Agency, Sidhpura. Contact us for wholesale availability and enquiry.");
-      const enquiryMessage = `Hello Tanya Agency, I want to enquire about ${name}. Please share the wholesale price and availability.`;
-      productWhatsApp.href = `https://wa.me/919557495828?text=${encodeURIComponent(enquiryMessage)}`;
+      activeProductName = name;
+      customerLocation = null;
+      locationStatus.textContent = 'Your location can be added to the WhatsApp message after you allow location access.';
+      const savedName = localStorage.getItem('tanyaCustomerName');
+      if (savedName && !customerName.value) customerName.value = savedName;
+      productWhatsApp.href = `https://wa.me/919557495828?text=${encodeURIComponent(`Hello Tanya Agency, I want to enquire about ${name}. Please share the wholesale price and availability.`)}`;
       modal.classList.add('open');
       modal.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
     }
+
+
+    productWhatsApp.addEventListener('click', function(e) {
+      e.preventDefault();
+      const name = customerName.value.trim();
+      if (name) localStorage.setItem('tanyaCustomerName', name);
+
+      const openWhatsApp = (locationText = '') => {
+        const customer = name || 'Customer';
+        const message = `Hello Tanya Agency, I want to enquire about ${activeProductName}.\n\nCustomer Name: ${customer}${locationText ? `\nLocation: ${locationText}` : ''}\n\nPlease share the wholesale price and availability.`;
+        window.open(`https://wa.me/919557495828?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+      };
+
+      if (!navigator.geolocation) {
+        locationStatus.textContent = 'Location is not supported by this browser. Enquiry will be sent without location.';
+        openWhatsApp();
+        return;
+      }
+
+      locationStatus.textContent = 'Getting your location…';
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          customerLocation = position.coords;
+          const mapsLink = `https://www.google.com/maps?q=${position.coords.latitude},${position.coords.longitude}`;
+          locationStatus.textContent = 'Location added to the WhatsApp message.';
+          openWhatsApp(mapsLink);
+        },
+        () => {
+          locationStatus.textContent = 'Location permission was not given. Enquiry will be sent without location.';
+          openWhatsApp();
+        },
+        { enableHighAccuracy: true, timeout: 8000, maximumAge: 300000 }
+      );
+    });
 
     function closeProduct() {
       modal.classList.remove('open');
