@@ -127,7 +127,7 @@
         <p>Serving retailers, contractors and businesses in Sidhpura and nearby areas of Kasganj, Uttar Pradesh.</p>
         <div class="stats">
           <div><strong>25</strong><span>Years Coca-Cola<br>distribution</span></div>
-          <div><br>Red Bull</strong><span>business started in<strong>2026</span></div>
+          <div><strong>2026</strong><span>Red Bull<br>business started</span></div>
           <div><strong>6</strong><span>Years Trimurti<br>products</span></div>
         </div>
         <div class="actions">
@@ -266,7 +266,7 @@
       <p id="productModalDescription"></p>
       <div class="product-modal-actions">
         <a class="btn primary" href="tel:+919557495828">Call Now</a>
-        <a class="btn whatsapp" href="https://wa.me/919557495828" target="_blank" rel="noopener">WhatsApp Enquiry</a>
+        <a class="btn whatsapp" id="productWhatsApp" href="https://wa.me/919557495828" target="_blank" rel="noopener">WhatsApp Enquiry</a>
       </div>
       <p class="product-modal-note">Wholesale supply for retailers, contractors and businesses in Sidhpura and nearby areas.</p>
     </div>
@@ -316,6 +316,7 @@
     const title = document.getElementById('productModalTitle');
     const description = document.getElementById('productModalDescription');
     const modalImage = document.getElementById('productModalImage');
+    const productWhatsApp = document.getElementById('productWhatsApp');
 
     document.querySelectorAll('[data-product]').forEach((el) => {
       const name = el.dataset.product;
@@ -338,6 +339,8 @@
       modalImage.src = productImages[name] || productImages['Coca-Cola Beverages'];
       modalImage.alt = name + ' product image';
       description.textContent = productInfo[name] || (name + " available through Tanya Agency, Sidhpura. Contact us for wholesale availability and enquiry.");
+      const enquiryMessage = `Hello Tanya Agency, I want to enquire about ${name}. Please share the wholesale price and availability.`;
+      productWhatsApp.href = `https://wa.me/919557495828?text=${encodeURIComponent(enquiryMessage)}`;
       modal.classList.add('open');
       modal.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
