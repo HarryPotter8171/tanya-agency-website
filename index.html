@@ -10,6 +10,14 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     .product-list span,.single-product{cursor:pointer;transition:transform .2s ease,background .2s ease}
+    .product-section{position:relative;overflow:hidden}
+    .product-section::before{position:absolute;right:-7%;top:50%;transform:translateY(-50%) rotate(-8deg);font-weight:900;line-height:.8;white-space:nowrap;pointer-events:none;z-index:0;opacity:.12;letter-spacing:-4px}
+    .product-section.red::before,.product-section.navy::before,.product-section.green::before{content:"";display:none}
+    .brand-watermark{position:absolute;right:4%;top:50%;transform:translateY(-50%);width:min(43%,520px);max-height:62%;object-fit:contain;opacity:.13;filter:brightness(0) invert(1);pointer-events:none;z-index:0}
+    .brand-watermark.redbull{filter:none;opacity:.14}
+    .brand-watermark.trimurti{filter:brightness(0) invert(1);opacity:.14}
+    .product-section .section-inner{position:relative;z-index:1}
+    @media(max-width:700px){.brand-watermark{width:58%;right:-5%;opacity:.10}.brand-watermark.redbull,.brand-watermark.trimurti{opacity:.11}}
     .product-list span:hover,.single-product:hover{transform:translateY(-2px)}
     .product-list span:focus-visible,.single-product:focus-visible{outline:3px solid rgba(255,255,255,.8);outline-offset:3px}
     .product-modal{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.68)}
@@ -99,6 +107,7 @@
     </section>
 
     <section id="coca-cola" class="product-section red">
+      <img class="brand-watermark" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg" alt="Coca-Cola logo watermark" aria-hidden="true">
       <div class="section-inner">
         <div>
           <span class="eyebrow">COCA-COLA DISTRIBUTION</span>
@@ -118,6 +127,7 @@
     </section>
 
     <section id="red-bull" class="product-section navy">
+      <img class="brand-watermark redbull" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Logo_of_Red_bull.svg" alt="Red Bull logo watermark" aria-hidden="true">
       <div class="section-inner">
         <div>
           <span class="eyebrow">RED BULL DISTRIBUTION</span>
@@ -130,6 +140,7 @@
     </section>
 
     <section id="trimurti" class="product-section green">
+      <img class="brand-watermark trimurti" src="https://trimurtiproducts.com/wp-content/uploads/2024/12/Logo.png" alt="Trimurti logo watermark" aria-hidden="true">
       <div class="section-inner">
         <div>
           <span class="eyebrow">TRIMURTI BUILDING PRODUCTS</span>
